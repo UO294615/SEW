@@ -101,6 +101,7 @@ nav a:hover{
 @media (max-width: 480px) {
     header {
         padding: 0.5em; /* Menos espacio en móviles */
+        flex-direction: column;
     }
 
     h1 {
@@ -110,7 +111,7 @@ nav a:hover{
 
     nav {
         display: flex;
-        flex-direction: column; /* Cambia a columna en móviles */
+        flex-direction: row; 
         font-size: 0.9em; /* Tamaño de fuente ajustado */
     }
 
@@ -232,8 +233,8 @@ dd:hover{
 
 /* ESPECIFICIDAD: 001 */
 table{
-    width: 100%;
-    max-width: 100%;
+    width: 50%;
+    max-width: 50%;
     height: auto;
     border-collapse: collapse; /* Elimina el espacio entre celdas */
     font-size: 1em;   

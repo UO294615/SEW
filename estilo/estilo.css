@@ -1,0 +1,278 @@
+/* Alejandro Vega García UO294615 */
+
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+/* ESPECIFICIDAD: 001 */
+body{
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500;
+    font-size: medium;
+    background-color: #f0f8f7;
+    color: #000000;
+}
+
+/* ESPECIFICIDAD: 001 */
+header{
+    background-color: #07575B;
+    color: #FFFFFF;
+}
+
+/* ESPECIFICIDAD: 001*/
+h1{
+    font-size: 2.5em;
+}
+
+/* ESPECIFICIDAD: 001*/
+h2{
+    font-size: 2em;
+    text-align: center;
+}
+
+/* ESPECIFICIDAD: 001*/
+h3{
+    font-size: 1.75em;
+    text-align: center;
+}
+
+/* ESPECIFICIDAD: 001*/
+h4{
+    font-size: 1.5em;
+
+}
+
+/* ESPECIFICIDAD: 001*/
+h5{
+    font-size: 1.25em;
+}
+
+/* ESPECIFICIDAD: 001*/
+p {
+    text-align: justify;
+}
+
+/* ESPECIFICIDAD: 001 */
+section, aside{
+    background-color: #FFFFFF;
+    border: 3px solid #07575B;
+    border-radius: 10px;
+}
+
+
+/* ESPECIFICIDAD: 001 */
+nav{
+    width: 80%;
+    font-size: 1.2em;
+}
+
+/*ESPECIFICIDAD: 002*/
+nav a{
+    color: #FFFFFF;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* ESPECIFICIDAD 012 */
+nav a.active {
+    color: #FFD700;
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+/* ESPECIFICIDAD: 012 */
+nav a:hover{
+    text-decoration: underline;
+}
+
+/* Media query para pantallas medianas (tamaño de una tableta aproximadamente) */
+@media (max-width: 768px) {
+    /* ESPECIFICIDAD: 002 */
+    header h1{
+        font-size: 2em; /* Reduce el tamaño del título */
+    }
+    /* ESPECIFICIDAD: 001 */
+    nav {
+        font-size: 1em;
+        gap: 0.5em; /* Reduce el espacio entre enlaces */
+    }
+}
+
+
+/* Media query para pantallas pequeñas (móviles) */
+@media (max-width: 480px) {
+
+    /* ESPECIFIDAD: 001 */
+    header{
+        flex-direction: column;
+        padding: 1em;
+    }
+
+    /* ESPECIFIDAD: 002 */
+    header h1{
+        font-size: 1.8em;
+        margin-bottom: 0.5em;
+        text-align: center; /* El título se situará en el centro y el menú debajo en pantallas pequeñas */
+    }
+
+    /* ESPECIFIDAD: 001 */
+    nav{
+
+        font-size: 0.9em;
+        gap: 0.3em;
+    }
+
+    /* ESPECIFIDAD: 013 */
+    main > p:first-of-type:has(a) {
+        display: none; /* Oculta las migas de navegación */
+    
+    }
+   
+}
+
+/* ESPECIFICIDAD: 002*/
+h1>a{
+    color:#FFFFFF;
+    text-decoration: none;
+}
+
+
+/* ESPECIFICIDAD: 002 */
+main>p{
+    text-align: center;
+}
+
+/* ESPECIFICIDAD: 003 */
+main > p:first-of-type:has(a) {
+    /* Estilos específicos para el párrafo de migas de navegación */
+    font-size: smaller;
+    color: #666666;
+}
+
+/*ESPECIFICIDAD: 021*/
+a[href^="http"]:link{
+    color: #000000; /* Color inicial para enlaces externos, cuando no están visitados */
+    text-decoration: underline;
+}
+
+/*ESPECIFICIDAD: 021*/
+a[href ^= "http"]:hover{
+    color: #003366;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/*ESPECIFICIDAD: 021*/
+a[href ^= "http"]:active{
+    color: #ff0000;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/*ESPECIFICIDAD: 001*/
+ul{
+    list-style-type: square; /* Cambia la viñeta a un cuadrado en lugar de un círculo (disc) */
+    color: #003366 ;
+}
+
+/*ESPECIFICIDAD: 002*/
+ul ul{
+    list-style-type: disc;
+}
+
+/*ESPECIFICIDAD: 004*/
+ul ul li::marker{
+    color: blue;
+}
+
+/*ESPECIFICIDAD: 002*/
+li::marker{
+    color: #ff0000;
+}
+
+/* ESPECIFICIDAD: 002*/
+li > p{
+    color: #000000;
+}
+
+/* ESPECIFICIDAD: 001*/
+ol{
+
+    list-style-type: decimal;
+
+}
+
+/* ESPECIFICIDAD: 002 */
+ol li{
+    font-size: 1.2em;
+}
+
+/* ESPECIFICIDAD: 002*/
+dl dt{
+    color: #0056B3;
+    font-weight: bold;
+    font-size: 1.2em;
+    background-color: #e0f7fa;
+    border-radius: 0.3em;
+}
+
+/* ESPECIFICIDAD: 002*/
+dl dd {
+    color: #333333;
+    font-size: 1em;
+    background-color: #F5F5F5;
+    border-left: 0.2em solid #0056b3;
+}
+
+/* ESPECIFICIDAD: 011 */
+dd:hover{
+    background-color: #d1e7dd;
+}
+
+/* ESPECIFICIDAD: 001 */
+table{
+    width: 100%;
+    height: auto;
+    border-collapse: collapse; /* Elimina el espacio entre celdas */
+    font-size: 1em;   
+}
+
+/* ESPECIFICIDAD: 001 */
+th{
+    background-color: #0056B3;
+    color: #FFFFFF;
+    font-weight: bold;
+    text-align: center;
+}
+
+/* ESPECIFICIDAD: 001 */
+td{
+    background-color: #E9F1F5;
+    color: #333333;
+    text-align: center;
+    border: 0.1em solid #333333;
+}
+
+/* ESPECIFICIDAD: 011 */
+td:hover{
+    background-color: #d1e7dd;
+}
+
+/* ESPECIFICIDAD: 001 */
+img{
+    width: 100%;
+    height: auto;
+}
+
+/* ESPECIFICIDAD: 001 */
+video{
+    width: 70%;
+    height: auto;
+}
+
+/* ESPECIFICIDAD: 001 */
+audio{
+    width: 50%;
+}
+
+
+

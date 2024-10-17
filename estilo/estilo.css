@@ -128,10 +128,7 @@ nav a:hover{
         max-width: 100%; /* Asegúrate de que las imágenes no excedan el contenedor */
         height: auto; /* Mantiene la proporción de la imagen */
     }
-    
-    section {
-        padding: 2%; /* Espaciado ajustado */
-    }
+
 }
 
 /* ESPECIFICIDAD: 002*/
@@ -236,6 +233,7 @@ dd:hover{
 /* ESPECIFICIDAD: 001 */
 table{
     width: 100%;
+    max-width: 100%;
     height: auto;
     border-collapse: collapse; /* Elimina el espacio entre celdas */
     font-size: 1em;   
